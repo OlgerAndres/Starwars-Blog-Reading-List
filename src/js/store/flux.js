@@ -19,11 +19,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+			loadPeoples: async () => {
+				const url = "https://akabab.github.io/starwars-api/api/all.json/";
+				const response = await fetch(url);
+				const data = await response.json();
+				setStore({ peoples: data.results });
 			},
+
+			loadPlanets: async () => {
+				const url = "https://swapi.dev/api/planets/";
+				const response = await fetch(url);
+				const data = await response.json();
+				setStore({ planets: data.results });
+			},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
