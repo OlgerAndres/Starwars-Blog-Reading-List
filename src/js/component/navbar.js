@@ -7,7 +7,7 @@ export const Navbar = () => {
 			<a className="navbar-brand" href="#">
 				<img
 					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1024px-Star_Wars_Logo.svg.png"
-					style={{ with: "50px", height: "50px" }}
+					style={{ with: "80px", height: "80px" }}
 				/>
 				<Link to="/" />
 			</a>
