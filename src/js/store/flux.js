@@ -20,10 +20,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 			loadPeoples: async () => {
-				const url = "https://akabab.github.io/starwars-api/api/all.json/";
+				const url = "https://swapi.dev/api/people/";
 				const response = await fetch(url);
 				const data = await response.json();
 				setStore({ peoples: data.results });
+				//console.log("Desde flux", store.peoples);
 			},
 
 			loadPlanets: async () => {
