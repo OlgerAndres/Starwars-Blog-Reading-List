@@ -10,7 +10,7 @@ export function PlanetCard(props) {
 			<div className="card" style={{ width: "18rem" }}>
 				<img
 					className="card-img-top"
-					src="https://laverdadnoticias.com/__export/1577473483235/sites/laverdad/img/2019/12/27/star-wars-fondo-de-pantalla-wallpaper.jpg_1183029055.jpg"
+					src="https://i.pinimg.com/originals/8a/a9/2c/8aa92c5ba570f0c8d50a97e6bce0a8ea.jpg"
 				/>
 
 				<div className="card-body">

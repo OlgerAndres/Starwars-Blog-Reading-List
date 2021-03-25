@@ -7,9 +7,10 @@ export const Planets = () => {
 	const { store, actions } = useContext(Context);
 	console.log("data planets", store.planets);
 	return (
+		//row flex-row flex-nowrap mt-4 pb-4 pt-2
 		<div className="container-fluid characters mt-5">
 			<h1 style={{ color: "red" }}>Planets</h1>
-			<div className="row">
+			<div className="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2">
 				{!store.planets
 					? "Cargando"
 					: store.planets.map((item, index) => {

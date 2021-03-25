@@ -5,13 +5,16 @@ import { Context } from "../store/appContext";
 export function PeopleCard(props) {
 	const { store, actions } = useContext(Context);
 	console.log(store);
+
+	const handleOnClick = e => {
+		let fav = props.name;
+		actions.addFavorites(fav);
+		console.log(store.addFavorites);
+	};
 	return (
 		<div className="col">
 			<div className="card" style={{ width: "18rem" }}>
-				<img
-					className="card-img-top"
-					src="https://laverdadnoticias.com/__export/1577473483235/sites/laverdad/img/2019/12/27/star-wars-fondo-de-pantalla-wallpaper.jpg_1183029055.jpg"
-				/>
+				<img className="card-img-top" src="https://i.blogs.es/26ba45/star-wars-eras/450_1000.jpeg" />
 
 				<div className="card-body">
 					<h5 className="card-title text-xl-center" style={{ color: "blue" }}>
@@ -24,7 +27,7 @@ export function PeopleCard(props) {
 					<a href="#" className="btn btn-primary mr-5">
 						Learn More!
 					</a>
-					<a href="#" className="btn btn-primary ml-3" onClick={e => handleOnClick(e)}>
+					<a href="#" className="btn btn-primary ml-3" onClick={() => actions.addFavorites(props.name)}>
 						<i className="fas fa-heart" />
 					</a>
 				</div>
@@ -39,5 +42,6 @@ PeopleCard.propTypes = {
 	eye_color: PropTypes.string,
 	hair_color: PropTypes.string,
 	img: PropTypes.string,
-	height: PropTypes.string
+	height: PropTypes.string,
+	id: PropTypes.number
 };
