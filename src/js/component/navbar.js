@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-import { PeopleCard } from "./peopleCard";
-
 export const Navbar = () => {
+	const { store, actions } = useContext(Context);
 	// const showFavorites = store.showFavorites.map((item, index) => {
 	// 	return;
 
@@ -29,9 +28,16 @@ export const Navbar = () => {
 					Favorites <span className="badge badge-light">0</span>
 				</button>
 
-				{/* <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<a className="dropdown-item" href="#" />
-				</div> */}
+				<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					{store.favorites.map((item, index) => {
+						return (
+							<li key={index} className="dropdown-item" href="#">
+								{item}
+								<i className="fas fa-trash-alt float-right" onClick={() => actions.favorites(index)} />
+							</li>
+						);
+					})}
+				</div>
 			</div>
 		</nav>
 	);

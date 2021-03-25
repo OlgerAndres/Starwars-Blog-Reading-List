@@ -9,7 +9,7 @@ export function PeopleCard(props) {
 	const handleOnClick = e => {
 		let fav = props.name;
 		actions.addFavorites(fav);
-		console.log(store.addFavorites);
+		console.log("data de favoritos", store.addFavorites);
 	};
 	return (
 		<div className="col">
