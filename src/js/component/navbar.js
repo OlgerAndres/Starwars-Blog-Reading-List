@@ -25,7 +25,7 @@ export const Navbar = () => {
 					data-toggle="dropdown"
 					aria-haspopup="true"
 					aria-expanded="false">
-					Favorites <span className="badge badge-light">0</span>
+					Favorites <span className="badge badge-light">{store.favorites.length}</span>
 				</button>
 
 				<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -33,7 +33,10 @@ export const Navbar = () => {
 						return (
 							<li key={index} className="dropdown-item" href="#">
 								{item}
-								<i className="fas fa-trash-alt float-right" onClick={() => actions.favorites(index)} />
+								<i
+									className="fas fa-trash-alt float-right"
+									onClick={() => actions.deleteFavorites(index)}
+								/>
 							</li>
 						);
 					})}
