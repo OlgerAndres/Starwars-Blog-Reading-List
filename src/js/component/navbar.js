@@ -11,11 +11,14 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-light">
 			<a className="navbar-brand" href="#">
-				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1024px-Star_Wars_Logo.svg.png"
-					style={{ with: "60px", height: "60px", borderRadius: "60%" }}
-				/>
-				<Link to="/" />
+				<Link to="/">
+					<img
+						role="button"
+						href="#"
+						src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1024px-Star_Wars_Logo.svg.png"
+						style={{ with: "60px", height: "60px", borderRadius: "60%" }}
+					/>
+				</Link>
 			</a>
 			<div className="dropdown">
 				<button

@@ -1,6 +1,8 @@
 import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
+import { PeopleCardDatails } from "../component/peopleCardDetails";
 
 export function PeopleCard(props) {
 	const { store, actions } = useContext(Context);
@@ -24,8 +26,8 @@ export function PeopleCard(props) {
 					<p className="card-text text-lg-center">Hair Color: {props.hair_color}</p>
 					<p className="card-text text-lg-center">Eyes Color: {props.eye_color}</p>
 					<p className="card-text text-lg-center">Height: {props.height}</p>
-					<a href="#" className="btn btn-primary mr-5">
-						Learn More!
+					<a href="#" className="btn btn-info mr-5">
+						<Link to="/peopleDetails/:id">Learn More!</Link>
 					</a>
 					<a href="#" className="btn btn-primary ml-3" onClick={() => actions.addFavorites(props.name)}>
 						<i className="fas fa-heart" />
