@@ -13,6 +13,7 @@ export const People = () => {
 				{!store.peoples
 					? "Cargando"
 					: store.peoples.map((item, index) => {
+							console.log(item);
 							return (
 								<div key={index}>
 									<PeopleCard
@@ -21,7 +22,7 @@ export const People = () => {
 										hair_color={item.hair_color}
 										gender={item.gender}
 										eye_color={item.eye_color}
-										id={item.id}
+										id={index}
 									/>
 								</div>
 							);

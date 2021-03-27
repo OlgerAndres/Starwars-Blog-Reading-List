@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			favorites: [],
+			people: {},
 			demo: [
 				{
 					title: "FIRST",
@@ -25,6 +26,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const response = await fetch(url);
 				const data = await response.json();
 				setStore({ peoples: data.results });
+				//console.log("Desde flux", store.peoples);
+			},
+
+			loadDetails: async url => {
+				const response = await fetch(url);
+				const data = await response.json();
+				setStore({ people: data.results });
+				console.log("data", data);
 				//console.log("Desde flux", store.peoples);
 			},
 

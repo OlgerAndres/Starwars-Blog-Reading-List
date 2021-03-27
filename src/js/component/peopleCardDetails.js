@@ -1,11 +1,14 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 import { Link, useParams } from "react-router-dom";
 
 export function PeopleCardDatails(props) {
 	const { store, actions } = useContext(Context);
-
+	useEffect(function() {
+		actions.loadDetails(props.url);
+		console.log("Detalles", store.people);
+	}, []);
 	return (
 		<div className="container">
 			<div className="card mb-3">
@@ -54,5 +57,6 @@ PeopleCardDatails.propTypes = {
 	hair_color: PropTypes.string,
 	img: PropTypes.string,
 	height: PropTypes.string,
-	id: PropTypes.number
+	id: PropTypes.number,
+	url: PropTypes.string
 };
