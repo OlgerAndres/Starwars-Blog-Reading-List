@@ -8,41 +8,63 @@ export function PeopleCardDatails(props) {
 
 	return (
 		<div className="container">
-			<div className="card mb-3">
-				<div className="row no-gutters">
-					<div className="col-md-4">
-						<img src="" alt="..." />
-					</div>
-					<div className="col-md-8">
-						<div className="card-body">
-							<h5 className="card-title">Name: {props.name}</h5>
-							<p className="card-text">
-								This is a wider card with supporting text below as a natural lead-in to additional
-								content. This content is a little bit longer.
-							</p>
-						</div>
-					</div>
+			<div className="card">
+				<img
+					src="https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/test/5cbeea135cafe88451149213/sw1.jpg"
+					className="card-img-top"
+					alt="Dark Vader"
+					style={{ height: "550px", with: "350px" }}
+				/>
+				<div className="card-body">
+					<h5 className="card-title">{props.name}</h5>
+					<p className="card-text">
+						Star Wars is an American epic space opera media franchise created by George Lucas, which began
+						with the eponymous 1977 film and quickly became a worldwide pop-culture phenomenon.
+					</p>
 				</div>
 			</div>
 
-			<table className="table" />
-			<thead>
-				<tr>
-					<th scope="col">Name</th>
-					<th scope="col">Gender</th>
-					<th scope="col">Heigth</th>
-					<th scope="col">Hair Color</th>
-				</tr>
-			</thead>
+			<div className="row text-justify" style={{ marginTop: "20px", borderTop: "2px solid" }}>
+				<div className="col-2">
+					<p className="asize">
+						Name
+						<br />
+						{props.name}
+					</p>
+				</div>
 
-			<tbody />
-			<tr>
-				<th scope="row" />
-				<td>{props.name}</td>
-				<td>{props.gender}</td>
-				<td>{props.height}</td>
-				<td>{props.hair_color}</td>
-			</tr>
+				<div className="col-2">
+					<p className="asize">
+						Gender
+						<br />
+						{props.gender}
+					</p>
+				</div>
+
+				<div className="col-2">
+					<p className="asize">
+						Hair Color
+						<br />
+						{props.hair_color}
+					</p>
+				</div>
+
+				<div className="col-2">
+					<p className="asize">
+						Eye Color
+						<br />
+						{props.eye_color}
+					</p>
+				</div>
+
+				<div className="col-2">
+					<p className="asize">
+						Heigth
+						<br />
+						{props.height}
+					</p>
+				</div>
+			</div>
 		</div>
 	);
 }

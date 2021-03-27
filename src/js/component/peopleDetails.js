@@ -11,14 +11,15 @@ export const PeopleDetails = () => {
 			{!store.peoples
 				? "Cargando"
 				: store.peoples.map((item, index) => {
-						if (id === index) {
+						if (id == index) {
 							return (
 								<div key={index}>
 									<PeopleCardDatails
 										name={item.name}
 										hair_color={item.hair_color}
 										gender={item.gender}
-										heigth={item.heigth}
+										height={item.height}
+										eye_color={item.eye_color}
 										id={index}
 									/>
 								</div>
