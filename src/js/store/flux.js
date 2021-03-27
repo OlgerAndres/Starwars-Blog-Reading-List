@@ -29,13 +29,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				//console.log("Desde flux", store.peoples);
 			},
 
-			loadDetails: async url => {
-				const response = await fetch(url);
-				const data = await response.json();
-				setStore({ people: data.results });
-				console.log("data", data);
-				//console.log("Desde flux", store.peoples);
-			},
+			// loadDetails: async url => {
+			// 	const response = await fetch(url);
+			// 	const data = await response.json();
+			// 	setStore({ people: data.results });
+			// 	console.log("data", data);
+			// 	//console.log("Desde flux", store.peoples);
+			// },
 
 			loadPlanets: async () => {
 				const url = "https://swapi.dev/api/planets/";
