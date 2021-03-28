@@ -3,6 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			favorites: [],
 			people: {},
+			planet: {},
 			demo: [
 				{
 					title: "FIRST",
