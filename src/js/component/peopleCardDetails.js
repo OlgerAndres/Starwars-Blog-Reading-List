@@ -26,7 +26,7 @@ export function PeopleCardDatails(props) {
 
 			<div className="row text-justify" style={{ marginTop: "20px", borderTop: "2px solid" }}>
 				<div className="col-2">
-					<p className="asize">
+					<p className="asize" style={{ color: "red" }}>
 						Name
 						<br />
 						{props.name}
@@ -34,7 +34,7 @@ export function PeopleCardDatails(props) {
 				</div>
 
 				<div className="col-2">
-					<p className="asize">
+					<p className="asize" style={{ color: "red" }}>
 						Gender
 						<br />
 						{props.gender}
@@ -42,7 +42,7 @@ export function PeopleCardDatails(props) {
 				</div>
 
 				<div className="col-2">
-					<p className="asize">
+					<p className="asize" style={{ color: "red" }}>
 						Hair Color
 						<br />
 						{props.hair_color}
@@ -50,7 +50,7 @@ export function PeopleCardDatails(props) {
 				</div>
 
 				<div className="col-2">
-					<p className="asize">
+					<p className="asize" style={{ color: "red" }}>
 						Eye Color
 						<br />
 						{props.eye_color}
@@ -58,7 +58,7 @@ export function PeopleCardDatails(props) {
 				</div>
 
 				<div className="col-2">
-					<p className="asize">
+					<p className="asize" style={{ color: "red" }}>
 						Heigth
 						<br />
 						{props.height}

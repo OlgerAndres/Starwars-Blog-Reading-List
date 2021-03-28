@@ -26,7 +26,7 @@ export function PlanetsCardDatails(props) {
 
 			<div className="row text-justify" style={{ marginTop: "20px", borderTop: "2px solid" }}>
 				<div className="col-2">
-					<p className="asize">
+					<p className="asize" style={{ color: "red" }}>
 						Name
 						<br />
 						{props.name}
@@ -34,7 +34,7 @@ export function PlanetsCardDatails(props) {
 				</div>
 
 				<div className="col-2">
-					<p className="asize">
+					<p className="asize" style={{ color: "red" }}>
 						Population
 						<br />
 						{props.population}
@@ -42,7 +42,7 @@ export function PlanetsCardDatails(props) {
 				</div>
 
 				<div className="col-2">
-					<p className="asize">
+					<p className="asize" style={{ color: "red" }}>
 						Terrain
 						<br />
 						{props.terrain}
@@ -50,7 +50,7 @@ export function PlanetsCardDatails(props) {
 				</div>
 
 				<div className="col-2">
-					<p className="asize">
+					<p className="asize" style={{ color: "red" }}>
 						Diameter
 						<br />
 						{props.diameter}
@@ -58,7 +58,7 @@ export function PlanetsCardDatails(props) {
 				</div>
 
 				<div className="col-2">
-					<p className="asize">
+					<p className="asize" style={{ color: "red" }}>
 						Gravity
 						<br />
 						{props.gravity}
